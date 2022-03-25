@@ -4,7 +4,7 @@ import "./Product.css";
 const Product = ({ product, addToCart }) => {
   //   console.log(product);
   const { name, price, seller, ratings, img } = product;
-  console.log(name, price, seller, ratings, img);
+  //   console.log(name, price, seller, ratings, img);
   return (
     <div className="productCard">
       <img src={img} alt="" />
