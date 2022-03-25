@@ -18,6 +18,24 @@ const Shop = () => {
       .then((data) => setProducts(data));
   }, []);
 
+  // Getting product from local storage
+  useEffect(() => {
+    const storedProduct = getCart();
+    // console.log(storedProduct);
+    let savedProducts = [];
+    for (const id in storedProduct) {
+      // console.log(id, storedProduct[id]);
+      const matchedProduct = products.find((product) => product.id === id);
+      if (matchedProduct) {
+        matchedProduct.quantity = storedProduct[id];
+        savedProducts.push(matchedProduct);
+      }
+    }
+
+    setCart(savedProducts);
+    console.log(savedProducts);
+  }, [products]);
+
   //   Add to cart Handler
   const addToCart = (selectedProduct) => {
     let newCart = [];
