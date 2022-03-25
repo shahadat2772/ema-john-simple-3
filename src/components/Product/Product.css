@@ -1,0 +1,20 @@
+.productCard img {
+  height: 286px;
+  width: 286px;
+  margin: 8px 7px 0px 7px;
+}
+.productCard {
+  height: 510px;
+  width: 300px;
+  border: 1px solid rgba(149, 160, 167, 1);
+  border-radius: 8px;
+  position: relative;
+}
+.cardInfo {
+  margin: 0px 18px;
+}
+.AddBtn {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
